@@ -1,0 +1,9 @@
+<h2>Admin Dashboard</h2>
+<p>Willkommen, <%= user.email %></p>
+<a href="/upload">Neue M3U hochladen</a><br>
+<ul>
+  <% playlists.forEach(p => { %>
+    <li><%= p.name %> - <a href="/<%= p.path %>">Download</a></li>
+  <% }) %>
+</ul>
+<a href="/logout">Logout</a>
